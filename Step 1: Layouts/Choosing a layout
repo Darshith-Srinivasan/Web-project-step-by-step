@@ -1,0 +1,79 @@
+Points to consider for layout of your page:
+
+1. Define the Purpose of the Website
+Before drawing anything, ask:
+What is the website for? (Portfolio, Blog, E-commerce, Company, Dashboard…)
+Who is the target audience?
+What action should users take? (Signup, Read, Buy, Contact, Explore)
+
+👉 Purpose decides layout.
+
+A blog layout ≠ an e-commerce layout ≠ a dashboard layout.
+
+2. List All the Content & Features
+Write down everything your site needs:
+Header (logo, nav)
+Sidebar?
+Hero section / banner?
+About section?
+Services?
+Product cards?
+Footer?
+Forms, filters, images, buttons, menus?
+
+👉 You cannot pick a layout unless you know what must fit inside it.
+
+3. Choose the Navigation Style
+Decide how users will move around:
+Top navigation bar?
+Sidebar navigation?
+Hamburger menu (mobile)?
+Mega menu (large sites)?
+
+👉 Navigation affects the entire layout structure.
+
+4. Sketch Wireframes (Very Important)
+Make a simple rough layout (even on paper):
+Example:
+-------------------
+|    Header       |
+-------------------
+| Sidebar | Body  |
+-------------------
+|   Footer        |
+-------------------
+Or:
+Header
+Banner
+3 Boxes
+Content
+Footer
+
+
+👉 Sketch 3–5 versions and pick the best one.
+
+5. Decide Layout Technique
+Choose how you will build the layout:
+CSS Flexbox (good for rows/columns)
+CSS Grid (best for full page layout)
+Bootstrap / Tailwind (faster UI building)
+Plain CSS + media queries (fully custom)
+
+👉 Today, CSS Grid is the best for large layout structure.
+
+6. Plan Responsiveness (Mobile → Tablet → Desktop)
+Ask yourself:
+How should this look on mobile?
+Should the sidebar collapse?
+Should the menu become a burger menu?
+Should columns stack on top of each other?
+
+Design layouts for:
+Mobile first
+Tablet
+Desktop
+
+👉 Use media queries or responsive frameworks.
+
+
+To ease with the beggining I've attached 5 basic layouts on this folder with only HTML & CSS. (No fancy animations just rough outlines of layout)
