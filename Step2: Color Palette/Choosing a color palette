@@ -1,0 +1,199 @@
+Checklist to ship a palette
+ ->Primary hue chosen (brand intent matched)
+ ->Secondary & accent chosen (harmonious + useful)
+ ->Neutral palette defined for backgrounds/text/surfaces
+ ->CSS variables (tokens) created
+ ->Contrast ratios checked (WCAG) for text & components
+ ->Color-blind and grayscale checks passed
+ ->States (hover/active/focus/disabled) defined
+ ->Small style guide written for developers/designers
+ ->Tested on devices and iterated
+
+
+Quick TL;DR
+
+Pick 1 primary brand color.
+
+Add 1–2 secondary support colors.
+
+Add neutral colors (backgrounds, text).
+
+Add 1 accent for CTAs/alerts.
+
+Check contrast (WCAG) and color-blind readability.
+
+Create tokens (CSS variables) and sample states (hover/active/disabled).
+
+Test on devices and iterate.
+
+Step-by-step process
+1 — Start with objective & audience
+
+Purpose: e-commerce? corporate? blog? portfolio? dashboard?
+
+Audience: age, culture, accessibility needs (older users need higher contrast), local color meanings.
+
+Emotion: trust (blue), energetic (orange), luxury (dark purple/black), calm (greens).
+
+Why it matters: colour choices should support business goals (e.g., “trust” for banking, “action” for CTA).
+
+2 — Gather inspiration and constraints
+
+Look at competitor sites and note color patterns you like.
+
+Pick 2–3 reference images or brands for mood.
+
+List constraints: brand color(s) already fixed? must match existing logo? corporate brand guidelines?
+
+Tools: Coolors, Dribbble, Behance, Pinterest.
+
+3 — Choose a primary color
+
+The main brand color used for logo, primary CTAs, highlights.
+
+Pick a hue consistent with your brand emotion.
+
+Choose one good base tone (not too saturated, not too light).
+
+Example: #1E90FF (vivid blue) or #2D8A6E (forest green).
+
+4 — Generate supporting colors (secondary + accent)
+
+Secondary color(s): used for secondary buttons, illustrations, accents. Choose complementary or analogous hues to the primary.
+
+Accent color: bright contrast for call-to-action if primary is subtle — e.g., orange or magenta.
+
+Palette strategies:
+
+Monochrome — variations of one hue (safe, minimal).
+
+Analogous — adjacent hues on the wheel (harmonious).
+
+Complementary — opposite hue for high contrast CTAs.
+
+Triadic — three evenly spaced hues for lively palettes.
+
+5 — Define neutral palette (backgrounds, text)
+
+Backgrounds: light neutrals for light theme (#ffffff, #f6f7f8), or dark neutrals for dark theme (#0f1113, #121417).
+
+Text: high-contrast dark (#111827) or light (#f5f7fa). Use multiple levels:
+
+--text-primary (main body text)
+
+--text-secondary (muted text)
+
+--muted (helper text)
+
+Borders / dividers: subtle neutral (e.g., #e6e7e9).
+
+6 — Set color proportions (how often to use each)
+
+A common rule:
+
+Neutrals: 60–80% (backgrounds, large areas)
+
+Primary: 10–20% (brand presence)
+
+Secondary: 5–10% (supporting UI)
+
+Accent: 1–5% (CTAs, important highlights)
+
+This preserves balance and makes your accent color noticeable.
+
+7 — Assign colors to website parts (practical mapping)
+
+Page background: --bg (light or dark neutral).
+
+Surface / cards: --surface (slightly different neutral).
+
+Primary text: --text-primary.
+
+Secondary text: --text-secondary.
+
+Primary CTA background: --primary (primary color).
+
+Primary CTA text: usually white or dark depending on contrast.
+
+Secondary CTA / ghost buttons: border --primary, text --primary.
+
+Nav bar: can be --surface or --primary depending on design.
+
+Links: --link (often primary or a darker tint).
+
+Error / success / warning: standard red/orange/green (--danger, --success, --warning).
+
+Focus outlines / accessibility indicators: visible contrasting color (often --primary or #ffb900).
+
+Overlays / modal backdrop: rgba(0,0,0,0.5) for dark backgrounds.
+
+8 — Ensure accessibility: contrast & color blindness
+
+Contrast ratios (WCAG):
+
+Normal text: ≥ 4.5:1 (AA)
+
+Large text (≥18pt or 14pt bold): ≥ 3:1
+
+UI components & graphical objects: ≥ 3:1
+
+Tools: WebAIM Contrast Checker, Axe, Lighthouse (Chrome), Contrast (macOS), Stark plugin (Figma).
+
+Color blindness: Check palettes in grayscale and simulate deuteranopia/protanopia/tritanopia using tools (Color Oracle, Sim Daltonism, Stark). Avoid relying solely on color to convey information — add icons/labels.
+
+9 — Create color tokens and CSS variables (single source of truth)
+
+Create semantic variables (not just hexes) so you can update easily.
+
+Example CSS variables:
+
+:root{
+  --bg: #ffffff;
+  --surface: #f6f7f8;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --primary: #1E90FF;
+  --primary-600: #1b7fe6;
+  --accent: #ff7a59;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --muted: #e6e7e9;
+  --focus: #ffb400;
+}
+
+
+Use these tokens in your components, e.g. background: var(--surface); color: var(--text-primary).
+
+10 — Define states: hover, active, disabled, focus
+
+For each interactive color, define states (slightly darker/lighter or different opacity).
+
+Example for primary button:
+
+Normal: --primary
+
+Hover: --primary-600 (darker)
+
+Active: --primary-700
+
+Disabled: --muted (low contrast), text --text-secondary
+
+11 — Test on devices and environments
+
+Test on mobile, tablet, desktop screens.
+
+Test in bright sunlight (for mobile).
+
+Test with browser zoom and high-contrast OS mode.
+
+Test with users if possible.
+
+12 — Document the palette & usage (design tokens + README)
+
+Create a short style guide:
+
+Show each color swatch, hex/RGB, purpose, contrast ratio with primary text.
+
+Document when to use primary vs secondary vs accent.
+
+Add DOs and DON'Ts.
